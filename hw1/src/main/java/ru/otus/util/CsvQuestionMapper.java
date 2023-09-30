@@ -14,7 +14,7 @@ public class CsvQuestionMapper implements Mapper<Question> {
         List<Answer> answers = new ArrayList<>();
 
         for (int i = 1; i < args.length; i++) {
-            answers.add(new Answer(args[i]));
+            answers.add(new Answer(args[i].replace("\r", "")));
         }
 
         return new Question(name, answers);
