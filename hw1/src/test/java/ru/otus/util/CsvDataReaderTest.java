@@ -8,10 +8,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class CsvDataReaderTest {
-
-    private static final byte EXPECTED_LINES_OF_FILE = 5;
-    private static final DataReader<List<String[]>> dataReader = new CsvDataReader("qna.csv");
+class CsvDataReaderTest extends AbstractTest {
 
 
     @Test
