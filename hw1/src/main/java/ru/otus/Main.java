@@ -3,23 +3,32 @@ package ru.otus;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ru.otus.model.Question;
+import ru.otus.service.QuestionService;
 import ru.otus.util.DataReader;
 import ru.otus.util.Mapper;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
 
-    @SuppressWarnings("unchecked")
+
     public static void main(String[] args) {
+        var ctx = prepareContext();
+        var questionService = ctx.getBean(QuestionService.class);
+
+        printQuestions(questionService.getAllQuestions());
+    }
+
+    @SuppressWarnings("unchecked")
+    private static ClassPathXmlApplicationContext prepareContext() {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("/spring-context.xml");
         DataReader<List<String[]>> reader = context.getBean(DataReader.class);
         Mapper<Question> questionMapper = context.getBean(Mapper.class);
-        List<Question> questions = new ArrayList<>();
+        List<Question> dataSource = context.getBean(List.class);
 
-        reader.read().forEach(line -> questions.add(questionMapper.map(line)));
-        printQuestions(questions);
+        reader.read().forEach(line -> dataSource.add(questionMapper.map(line)));
+
+        return context;
     }
 
     private static void printQuestions(List<Question> questions) {
