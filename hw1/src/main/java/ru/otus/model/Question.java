@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
+import java.util.List;
+
 
 @RequiredArgsConstructor
 @Getter
@@ -13,5 +15,6 @@ import lombok.ToString;
 public final class Question {
 
     private final String name;
+    private final List<Answer> questions;
 
 }
