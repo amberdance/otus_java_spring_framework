@@ -4,6 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="dataReader" class="ru.otus.util.CsvDataReader">
-        <constructor-arg name="fileName" type="java.lang.String" value="qna.csv"/>
+        <constructor-arg index="0" value="qna.csv"/>
     </bean>
 </beans>
