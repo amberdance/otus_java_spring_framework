@@ -15,15 +15,12 @@ public class CsvDataReader implements DataReader<List<String>> {
 
     @Override
     public List<String> read() {
-        var contents = getFileContents();
-        return Arrays.stream(contents.split(";")).toList();
-    }
-
-    private String getFileContents() {
         try (var resource = getClass().getClassLoader().getResourceAsStream(fileName)) {
-            return new String(Objects.requireNonNull(resource).readAllBytes());
+            var data = Objects.requireNonNull(resource).readAllBytes();
+            return Arrays.stream(new String(data).split(";")).toList();
         } catch (IOException e) {
             throw new RuntimeException("Cannot find given file: " + fileName);
         }
     }
+
 }
