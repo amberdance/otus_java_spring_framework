@@ -10,6 +10,8 @@ import lombok.ToString;
 @Getter
 @EqualsAndHashCode(callSuper = false)
 @ToString
-public record Question(String name) {
+public final class Question {
+
+    private final String name;
 
 }
