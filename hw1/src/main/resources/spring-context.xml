@@ -6,4 +6,6 @@
     <bean id="dataReader" class="ru.otus.util.CsvDataReader">
         <constructor-arg index="0" value="qna.csv"/>
     </bean>
+
+    <bean id="mapper" class="ru.otus.util.CsvQuestionMapper"/>
 </beans>
