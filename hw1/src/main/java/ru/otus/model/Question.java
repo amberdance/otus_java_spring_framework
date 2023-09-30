@@ -15,6 +15,6 @@ import java.util.List;
 public final class Question {
 
     private final String name;
-    private final List<Answer> questions;
+    private final List<Answer> answers;
 
 }
