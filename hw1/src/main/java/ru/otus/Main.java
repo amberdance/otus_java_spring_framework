@@ -7,6 +7,7 @@ import ru.otus.service.IOService;
 import ru.otus.service.QuestionService;
 import ru.otus.util.CsvDataReader;
 import ru.otus.util.CsvQuestionMapper;
+import ru.otus.util.PrettyAwesomeWatermark;
 
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class Main {
     }
 
     private static void printQuestions(List<Question> questions, IOService ioService) {
-        printWatermark(ioService);
+        PrettyAwesomeWatermark.printWatermark();
 
         for (int i = 0; i < questions.size(); i++) {
             var currentQuestion = questions.get(i);
@@ -47,15 +48,5 @@ public class Main {
         }
     }
 
-    private static void printWatermark(IOService ioService) {
-        ioService.printLine("""
 
-                       __                     ____  __                _____            _           \s
-                      / /___ __   ______ _   / __ \\/ /___  _______   / ___/____  _____(_)___  ____ _
-                 __  / / __ `/ | / / __ `/  / / / / __/ / / / ___/   \\__ \\/ __ \\/ ___/ / __ \\/ __ `/
-                / /_/ / /_/ /| |/ / /_/ /  / /_/ / /_/ /_/ (__  )   ___/ / /_/ / /  / / / / / /_/ /\s
-                \\____/\\__,_/ |___/\\__,_/   \\____/\\__/\\__,_/____/   /____/ .___/_/  /_/_/ /_/\\__, / \s
-                                                                       /_/                 /____/  \s
-                """);
-    }
 }
