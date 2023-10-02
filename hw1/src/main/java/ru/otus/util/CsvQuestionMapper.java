@@ -6,9 +6,9 @@ import ru.otus.model.Question;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CsvQuestionMapper implements Mapper<Question> {
+public class CsvQuestionMapper {
 
-    @Override
+
     public Question map(String[] args) {
         var name = args[0];
         List<Answer> answers = new ArrayList<>();

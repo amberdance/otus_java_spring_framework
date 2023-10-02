@@ -4,8 +4,8 @@ package ru.otus;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ru.otus.model.Question;
 import ru.otus.service.QuestionService;
-import ru.otus.util.DataReader;
-import ru.otus.util.Mapper;
+import ru.otus.util.CsvDataReader;
+import ru.otus.util.CsvQuestionMapper;
 
 import java.util.List;
 
@@ -21,10 +21,10 @@ public class Main {
 
     @SuppressWarnings("unchecked")
     private static ClassPathXmlApplicationContext prepareContext() {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("/spring-context.xml");
-        DataReader<List<String[]>> reader = context.getBean(DataReader.class);
-        Mapper<Question> questionMapper = context.getBean(Mapper.class);
-        List<Question> dataSource = context.getBean(List.class);
+        var context = new ClassPathXmlApplicationContext("/spring-context.xml");
+        var reader = context.getBean(CsvDataReader.class);
+        var questionMapper = context.getBean(CsvQuestionMapper.class);
+        var dataSource = context.getBean(List.class);
 
         reader.read().forEach(line -> dataSource.add(questionMapper.map(line)));
 

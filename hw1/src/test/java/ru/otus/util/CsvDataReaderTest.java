@@ -3,8 +3,6 @@ package ru.otus.util;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -14,7 +12,7 @@ class CsvDataReaderTest extends AbstractTest {
     @Test
     @DisplayName("При отсутствии файла выбрасывает исключение")
     void when_FileNotExists_then_ExceptionThrew() {
-        DataReader<List<String[]>> dataReader = new CsvDataReader("test.csv");
+       var dataReader = new CsvDataReader("test.csv");
         assertThrows(RuntimeException.class, dataReader::read);
     }
 

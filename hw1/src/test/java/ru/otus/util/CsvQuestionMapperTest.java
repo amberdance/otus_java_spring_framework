@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CsvQuestionMapperTest extends AbstractTest {
 
-    private static final Mapper<Question> questionMapper = new CsvQuestionMapper();
+    private static final CsvQuestionMapper questionMapper = new CsvQuestionMapper();
     private static final List<Question> questions = new ArrayList<>();
 
     @Test

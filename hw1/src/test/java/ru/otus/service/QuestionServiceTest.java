@@ -8,7 +8,6 @@ import ru.otus.repository.QuestionRepository;
 import ru.otus.repository.QuestionRepositoryImpl;
 import ru.otus.util.AbstractTest;
 import ru.otus.util.CsvQuestionMapper;
-import ru.otus.util.Mapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class QuestionServiceTest extends AbstractTest {
 
     private static final List<Question> dataSource = new ArrayList<>();
-    private static final Mapper<Question> questionMapper = new CsvQuestionMapper();
+    private static final CsvQuestionMapper questionMapper = new CsvQuestionMapper();
     private static final QuestionRepository questionRepository = new QuestionRepositoryImpl(dataSource);
     private static final QuestionService questionService = new QuestionServiceImpl(questionRepository);
 

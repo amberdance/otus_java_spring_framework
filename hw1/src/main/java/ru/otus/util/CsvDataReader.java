@@ -10,12 +10,11 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
-public class CsvDataReader implements DataReader<List<String[]>> {
+public class CsvDataReader {
 
     private final String fileName;
 
 
-    @Override
     public List<String[]> read() {
         try (InputStream resource = getClass().getClassLoader().getResourceAsStream(fileName)) {
             byte[] data = Objects.requireNonNull(resource).readAllBytes();
