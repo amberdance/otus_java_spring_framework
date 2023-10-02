@@ -6,7 +6,7 @@
 
     <groupId>ru.otus</groupId>
     <artifactId>hw1</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <properties>
         <java.version>17</java.version>
