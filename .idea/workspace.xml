@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cb6cf071-0041-4748-b42d-d745db94ea4c" name="Changes" comment="fix: Во избежания лишних инициализаций объектов, они перенесены в статические поля" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit3 Test Class" />
+        <option value="spring-beans.schema" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2W6w9kZJYgSfKnyS98WVFytqJHG" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;hw1&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Projects/Java/otus_java_spring_framework/hw1/src/test/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Projects/Java/otus_java_spring_framework/hw1/src/main/java/ru/yandex/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;5c9d1782fbf74b1856d2962f142b5c47&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.otus.service" />
+      <recent name="ru.otus.repository" />
+      <recent name="ru.otus.util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\Java\otus_java_spring_framework\hw1\src\test\resources" />
+      <recent name="C:\Projects\Java\otus_java_spring_framework\hw1\src\main\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.otus.service" />
+      <recent name="ru.otus.util" />
+      <recent name="ru.otus" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.All in hw1">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.otus.Main" />
+      <module name="hw1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.otus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in hw1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CsvQuestionMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.otus.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.otus.util" />
+      <option name="MAIN_CLASS_NAME" value="ru.otus.util.CsvQuestionMapperTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuestionServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.otus.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.otus.service" />
+      <option name="MAIN_CLASS_NAME" value="ru.otus.service.QuestionServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in hw1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw1" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/hw1/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in hw1" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.QuestionServiceTest" />
+        <item itemvalue="JUnit.java in hw1" />
+        <item itemvalue="JUnit.CsvQuestionMapperTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cb6cf071-0041-4748-b42d-d745db94ea4c" name="Changes" comment="" />
+      <created>1696066187260</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696066187260</updated>
+      <workItem from="1696066191088" duration="2588000" />
+      <workItem from="1696068835820" duration="9080000" />
+      <workItem from="1696081157462" duration="126000" />
+    </task>
+    <task id="LOCAL-00001" summary="chore: Initial commit">
+      <created>1696066766128</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696066766128</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: Любезно попросил бота сгенерить 5 вопросов на агл">
+      <created>1696068570905</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696068570905</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: Любезно попросил бота сгенерить 5 вопросов на агл">
+      <created>1696068861203</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696068861203</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix: Junit4-&gt;Junit5">
+      <created>1696068883931</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696068883931</updated>
+    </task>
+    <task id="LOCAL-00005" summary="chore: Болванка для чтения csv файла">
+      <created>1696068908722</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696068908722</updated>
+    </task>
+    <task id="LOCAL-00006" summary="chore: Мусор">
+      <created>1696068921694</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696068921694</updated>
+    </task>
+    <task id="LOCAL-00007" summary="chore: Болванки моделей">
+      <created>1696069032127</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696069032127</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix: Вернул java object вместо records">
+      <created>1696069821857</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696069821857</updated>
+    </task>
+    <task id="LOCAL-00009" summary="chore: Trash">
+      <created>1696069832463</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696069832463</updated>
+    </task>
+    <task id="LOCAL-00010" summary="chore: Добавил список вопросов">
+      <created>1696071044482</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696071044482</updated>
+    </task>
+    <task id="LOCAL-00011" summary="chore: Добавлены новые реализации маппера строки csv в объект">
+      <created>1696071069932</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696071069932</updated>
+    </task>
+    <task id="LOCAL-00012" summary="chore: Наброски реализации читателя csv файла">
+      <created>1696071084936</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696071084936</updated>
+    </task>
+    <task id="LOCAL-00013" summary="refactor: Собрал в один метод реализацию получения строк из файла">
+      <created>1696071906375</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1696071906375</updated>
+    </task>
+    <task id="LOCAL-00014" summary="refactor: Удаление \r в конце строки при мапинге вопроса">
+      <created>1696072855728</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1696072855728</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactor: name -&gt; index во избежание назойливого warning">
+      <created>1696072876098</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1696072876098</updated>
+    </task>
+    <task id="LOCAL-00016" summary="refactor: Упрощен и исправлен CsvDataReader">
+      <created>1696072895787</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1696072895787</updated>
+    </task>
+    <task id="LOCAL-00017" summary="refactor: Исправлено имя поля">
+      <created>1696072945600</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1696072945600</updated>
+    </task>
+    <task id="LOCAL-00018" summary="refactor: Удален ненужный класс">
+      <created>1696072952472</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1696072952472</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat: Тест для читателя csv файла">
+      <created>1696073208251</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1696073208251</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat: Тест Мапера вопросов">
+      <created>1696073449865</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1696073449865</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feat: Добавлен принтер для вопросов">
+      <created>1696074227252</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1696074227252</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feat: Добавлены репозитории, сервисы, необходимые зависимости и тесты">
+      <created>1696075670006</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1696075670006</updated>
+    </task>
+    <task id="LOCAL-00023" summary="fix: Исправлена ошибка checkstyle">
+      <created>1696075904226</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1696075904226</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fix: Во избежания лишних инициализаций объектов, они перенесены в статические поля">
+      <created>1696077314503</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1696077314503</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="chore: Initial commit" />
+    <MESSAGE value="chore: Добавил доп. зависимости" />
+    <MESSAGE value="chore: Junit4 -&gt; Junit5" />
+    <MESSAGE value="feat: Любезно попросил бота сгенерить 5 вопросов на агл" />
+    <MESSAGE value="fix: Junit4-&gt;Junit5" />
+    <MESSAGE value="chore: Болванка для чтения csv файла" />
+    <MESSAGE value="chore: Мусор" />
+    <MESSAGE value="chore: Болванки моделей" />
+    <MESSAGE value="fix: Вернул java object вместо records" />
+    <MESSAGE value="chore: Trash" />
+    <MESSAGE value="chore: Добавил список вопросов" />
+    <MESSAGE value="chore: Добавлены новые реализации маппера строки csv в объект" />
+    <MESSAGE value="chore: Наброски реализации читателя csv файла" />
+    <MESSAGE value="refactor: Собрал в один метод реализацию получения строк из файла" />
+    <MESSAGE value="refactor: Удаление \r в конце строки при мапинге вопроса" />
+    <MESSAGE value="refactor: name -&gt; index во избежание назойливого warning" />
+    <MESSAGE value="refactor: Упрощен и исправлен CsvDataReader" />
+    <MESSAGE value="refactor: Исправлено имя поля" />
+    <MESSAGE value="refactor: Удален ненужный класс" />
+    <MESSAGE value="feat: Тест для читателя csv файла" />
+    <MESSAGE value="feat: Тест Мапера вопросов" />
+    <MESSAGE value="feat: Добавлен принтер для вопросов" />
+    <MESSAGE value="feat: Добавлены репозитории, сервисы, необходимые зависимости и тесты" />
+    <MESSAGE value="fix: Исправлена ошибка checkstyle" />
+    <MESSAGE value="fix: Во избежания лишних инициализаций объектов, они перенесены в статические поля" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Во избежания лишних инициализаций объектов, они перенесены в статические поля" />
+  </component>
+</project>
