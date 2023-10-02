@@ -10,10 +10,12 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class CsvQuestionMapperTest extends AbstractTest {
+class CsvQuestionMapperTest {
 
     private static final CsvQuestionMapper questionMapper = new CsvQuestionMapper();
     private static final List<Question> questions = new ArrayList<>();
+    private static final byte EXPECTED_LINES_OF_FILE = 5;
+    private static final CsvDataReader dataReader = new CsvDataReader("qna.csv");
 
     @Test
     @DisplayName("Должен мапить строки в объекты Question")

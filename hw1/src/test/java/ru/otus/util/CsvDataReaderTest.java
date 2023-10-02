@@ -6,13 +6,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class CsvDataReaderTest extends AbstractTest {
+class CsvDataReaderTest {
 
+    private static final byte EXPECTED_LINES_OF_FILE = 5;
+    private static final CsvDataReader dataReader = new CsvDataReader("qna.csv");
 
     @Test
     @DisplayName("При отсутствии файла выбрасывает исключение")
     void when_FileNotExists_then_ExceptionThrew() {
-       var dataReader = new CsvDataReader("test.csv");
+        var dataReader = new CsvDataReader("test.csv");
         assertThrows(RuntimeException.class, dataReader::read);
     }
 
