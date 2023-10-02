@@ -3,6 +3,7 @@ package ru.otus;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ru.otus.model.Question;
+import ru.otus.service.IOService;
 import ru.otus.service.QuestionService;
 import ru.otus.util.CsvDataReader;
 import ru.otus.util.CsvQuestionMapper;
@@ -15,8 +16,9 @@ public class Main {
     public static void main(String[] args) {
         var ctx = prepareContext();
         var questionService = ctx.getBean(QuestionService.class);
+        var ioService = ctx.getBean(IOService.class);
 
-        printQuestions(questionService.getAllQuestions());
+        printQuestions(questionService.getAllQuestions(), ioService);
     }
 
     @SuppressWarnings("unchecked")
@@ -31,22 +33,22 @@ public class Main {
         return context;
     }
 
-    private static void printQuestions(List<Question> questions) {
-        printWatermark();
+    private static void printQuestions(List<Question> questions, IOService ioService) {
+        printWatermark(ioService);
 
         for (int i = 0; i < questions.size(); i++) {
             var currentQuestion = questions.get(i);
 
-            System.out.printf("Question %d: %s\n", (i + 1), currentQuestion.getName());
-            System.out.println("Answers:");
+            ioService.printLine(String.format("Question %d: %s\n", (i + 1), currentQuestion.getName()));
+            ioService.printLine("Answers:");
 
             currentQuestion.getAnswers().forEach(a -> System.out.println("- " + a.getName()));
-            System.out.println();
+            ioService.printBlankLine();
         }
     }
 
-    private static void printWatermark() {
-        System.out.println("""
+    private static void printWatermark(IOService ioService) {
+        ioService.printLine("""
 
                        __                     ____  __                _____            _           \s
                       / /___ __   ______ _   / __ \\/ /___  _______   / ___/____  _____(_)___  ____ _

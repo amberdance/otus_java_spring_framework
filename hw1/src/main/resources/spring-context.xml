@@ -4,6 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="mapper" class="ru.otus.util.CsvQuestionMapper"/>
+    <bean id="ioService" class="ru.otus.service.ConsoleIOService"/>
     <bean id="dataSource" class="java.util.ArrayList"/>
 
     <bean id="dataReader" class="ru.otus.util.CsvDataReader">
