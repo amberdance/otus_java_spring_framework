@@ -5,8 +5,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ru.otus.model.Question;
 import ru.otus.service.IOService;
 import ru.otus.service.QuestionService;
-import ru.otus.util.CsvDataReader;
-import ru.otus.util.CsvQuestionMapper;
 import ru.otus.util.PrettyAwesomeWatermark;
 
 import java.util.List;
@@ -15,23 +13,11 @@ public class Main {
 
 
     public static void main(String[] args) {
-        var ctx = prepareContext();
+        var ctx = new ClassPathXmlApplicationContext("/spring-context.xml");
         var questionService = ctx.getBean(QuestionService.class);
         var ioService = ctx.getBean(IOService.class);
 
         printQuestions(questionService.getAllQuestions(), ioService);
-    }
-
-    @SuppressWarnings("unchecked")
-    private static ClassPathXmlApplicationContext prepareContext() {
-        var context = new ClassPathXmlApplicationContext("/spring-context.xml");
-        var reader = context.getBean(CsvDataReader.class);
-        var questionMapper = context.getBean(CsvQuestionMapper.class);
-        var dataSource = context.getBean(List.class);
-
-        reader.read().forEach(line -> dataSource.add(questionMapper.map(line)));
-
-        return context;
     }
 
     private static void printQuestions(List<Question> questions, IOService ioService) {
