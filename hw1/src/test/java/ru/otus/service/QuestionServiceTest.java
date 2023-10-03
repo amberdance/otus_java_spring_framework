@@ -22,7 +22,7 @@ class QuestionServiceTest {
     private static final List<Question> dataSource = new ArrayList<>();
     private static final CsvQuestionMapper questionMapper = new CsvQuestionMapper();
     private static final QuestionRepository questionRepository = new QuestionRepositoryImpl(dataSource);
-    private static final QuestionService questionService = new QuestionServiceImpl(questionRepository);
+    private static final QuestionService questionService = new QuestionServiceImpl(questionRepository, new ConsoleIOService());
 
     @BeforeEach
     void setUp() {
