@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="mapper" class="ru.otus.util.CsvQuestionMapper"/>
+    <bean id="ioService" class="ru.otus.service.ConsoleIOService"/>
+    <bean id="dataSource" class="java.util.ArrayList"/>
+    <bean id="dataReader" class="ru.otus.util.CsvDataReader">
+        <constructor-arg index="0" value="qna.csv"/>
+    </bean>
+
+    <bean id="dataSourceConfig" class="ru.otus.config.DataSourceConfig">
+        <constructor-arg index="0" ref="dataSource"/>
+        <constructor-arg index="1" ref="mapper"/>
+        <constructor-arg index="2" ref="dataReader"/>
+    </bean>
+
+    <bean id="questionRepository" class="ru.otus.repository.QuestionRepositoryImpl">
+        <constructor-arg index="0" ref="dataSource"/>
+    </bean>
+
+    <bean id="questionService" class="ru.otus.service.QuestionServiceImpl">
+        <constructor-arg index="0" ref="questionRepository"/>
+        <constructor-arg index="1" ref="ioService"/>
+    </bean>
+</beans>
